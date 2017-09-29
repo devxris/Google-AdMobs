@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		027D2E49350B289FBB2D31B6 /* Pods_Google_AdMobs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9CE2B1D04D893477CE5A28 /* Pods_Google_AdMobs.framework */; };
 		457840601F7DE9B900F5D73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4578405F1F7DE9B900F5D73A /* AppDelegate.swift */; };
 		457840651F7DE9B900F5D73A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457840631F7DE9B900F5D73A /* Main.storyboard */; };
 		457840671F7DE9B900F5D73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457840661F7DE9B900F5D73A /* Assets.xcassets */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27852FEA23EBFFCC49859255 /* Pods-Google AdMobs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google AdMobs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Google AdMobs/Pods-Google AdMobs.release.xcconfig"; sourceTree = "<group>"; };
+		3B9CE2B1D04D893477CE5A28 /* Pods_Google_AdMobs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_AdMobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4578405C1F7DE9B900F5D73A /* Google AdMobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google AdMobs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4578405F1F7DE9B900F5D73A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		457840641F7DE9B900F5D73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		4578406B1F7DE9B900F5D73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		457840741F7DEA8700F5D73A /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		457840761F7DEC0800F5D73A /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		DC0B8970591A9E49B4306697 /* Pods-Google AdMobs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google AdMobs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Google AdMobs/Pods-Google AdMobs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				027D2E49350B289FBB2D31B6 /* Pods_Google_AdMobs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				4578405E1F7DE9B900F5D73A /* Google AdMobs */,
 				4578405D1F7DE9B900F5D73A /* Products */,
+				77F060B1EC35055F81269109 /* Pods */,
+				B9CE51A616C0A1B6CC0B7AF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +98,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		77F060B1EC35055F81269109 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B8970591A9E49B4306697 /* Pods-Google AdMobs.debug.xcconfig */,
+				27852FEA23EBFFCC49859255 /* Pods-Google AdMobs.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B9CE51A616C0A1B6CC0B7AF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B9CE2B1D04D893477CE5A28 /* Pods_Google_AdMobs.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4578406E1F7DE9B900F5D73A /* Build configuration list for PBXNativeTarget "Google AdMobs" */;
 			buildPhases = (
+				141B9E0FD32A133AEC914D99 /* [CP] Check Pods Manifest.lock */,
 				457840581F7DE9B800F5D73A /* Sources */,
 				457840591F7DE9B800F5D73A /* Frameworks */,
 				4578405A1F7DE9B800F5D73A /* Resources */,
+				87B1C55D160F60E9D122090F /* [CP] Embed Pods Frameworks */,
+				F2EB41A52DB15CB2640AFECE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,6 +184,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		141B9E0FD32A133AEC914D99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Google AdMobs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87B1C55D160F60E9D122090F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Google AdMobs/Pods-Google AdMobs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2EB41A52DB15CB2640AFECE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Google AdMobs/Pods-Google AdMobs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		457840581F7DE9B800F5D73A /* Sources */ = {
@@ -300,6 +378,7 @@
 		};
 		4578406F1F7DE9B900F5D73A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC0B8970591A9E49B4306697 /* Pods-Google AdMobs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,6 +394,7 @@
 		};
 		457840701F7DE9B900F5D73A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27852FEA23EBFFCC49859255 /* Pods-Google AdMobs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
