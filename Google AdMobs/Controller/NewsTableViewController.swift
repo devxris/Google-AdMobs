@@ -9,8 +9,11 @@
 import UIKit
 import GoogleMobileAds
 
+// ca-app-pub-9021945860330642/1743670908
+
 class NewsTableViewController: UITableViewController {
 	
+	// Banner ad
 	lazy var adBannerView: GADBannerView = {
 		let banner = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
 		banner.adUnitID = "ca-app-pub-9021945860330642/3306844640"
@@ -19,12 +22,28 @@ class NewsTableViewController: UITableViewController {
 		return banner
 	}()
 	
+	// Full screen Ad
+	var interstitial: GADInterstitial?
+	
+	private func createAndLoadInterstitial() -> GADInterstitial? {
+		interstitial = GADInterstitial(adUnitID: "ca-app-pub-9021945860330642/1743670908")
+		guard let interstitial = interstitial else { return nil }
+		let request = GADRequest()
+		request.testDevices = [kGADSimulatorID] // to be removed before upload the app to app store
+		interstitial.load(request)
+		interstitial.delegate = self
+		return interstitial
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		navigationController?.navigationBar.prefersLargeTitles = true
 		navigationItem.largeTitleDisplayMode = .always
 		
-		// start to request ads
+		// start to show full screen ads
+		interstitial = createAndLoadInterstitial()
+
+		// start to request banner ads
 		adBannerView.load(GADRequest())
 	}
 	
@@ -89,6 +108,18 @@ extension NewsTableViewController: GADBannerViewDelegate {
 	}
 	
 	func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-		print("Failed to receive ads: \(error)")
+		print("Failed to receive banner ads: \(error)")
+	}
+}
+
+extension NewsTableViewController: GADInterstitialDelegate {
+	
+	func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+		print("Interstitial loaded successfully")
+		ad.present(fromRootViewController: self)
+	}
+	
+	func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+		print("Failed to receive full screen ads")
 	}
 }
