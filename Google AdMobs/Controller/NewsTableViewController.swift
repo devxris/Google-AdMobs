@@ -59,6 +59,14 @@ class NewsTableViewController: UITableViewController {
 		
 		return cell
 	}
+	
+	// Displaying a Sticky Banner Ad: Just put adBannerView on top of section header
+	override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		return adBannerView
+	}
+	override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return adBannerView.frame.height
+	}
 }
 
 extension NewsTableViewController: GADBannerViewDelegate {
@@ -70,9 +78,13 @@ extension NewsTableViewController: GADBannerViewDelegate {
 		let translateTransform = CGAffineTransform(translationX: 0, y: -bannerView.bounds.size.height)
 		bannerView.transform = translateTransform
 		UIView.animate(withDuration: 0.5) {
+			/* Banner on top of tableView headerView
 			self.tableView.tableHeaderView?.frame = bannerView.frame
 			bannerView.transform = CGAffineTransform.identity
-			self.tableView.tableHeaderView = bannerView
+			self.tableView.tableHeaderView = bannerView */
+			
+			// Displaying a Sticky Banner Ad
+			bannerView.transform = CGAffineTransform.identity
 		}
 	}
 	
