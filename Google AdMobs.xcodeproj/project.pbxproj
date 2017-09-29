@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		457840601F7DE9B900F5D73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4578405F1F7DE9B900F5D73A /* AppDelegate.swift */; };
-		457840621F7DE9B900F5D73A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457840611F7DE9B900F5D73A /* ViewController.swift */; };
 		457840651F7DE9B900F5D73A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457840631F7DE9B900F5D73A /* Main.storyboard */; };
 		457840671F7DE9B900F5D73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457840661F7DE9B900F5D73A /* Assets.xcassets */; };
 		4578406A1F7DE9B900F5D73A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457840681F7DE9B900F5D73A /* LaunchScreen.storyboard */; };
+		457840751F7DEA8700F5D73A /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457840741F7DEA8700F5D73A /* NewsTableViewController.swift */; };
+		457840771F7DEC0800F5D73A /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457840761F7DEC0800F5D73A /* NewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4578405C1F7DE9B900F5D73A /* Google AdMobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google AdMobs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4578405F1F7DE9B900F5D73A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		457840611F7DE9B900F5D73A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		457840641F7DE9B900F5D73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		457840661F7DE9B900F5D73A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		457840691F7DE9B900F5D73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4578406B1F7DE9B900F5D73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		457840741F7DEA8700F5D73A /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		457840761F7DEC0800F5D73A /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		4578405E1F7DE9B900F5D73A /* Google AdMobs */ = {
 			isa = PBXGroup;
 			children = (
-				4578405F1F7DE9B900F5D73A /* AppDelegate.swift */,
-				457840611F7DE9B900F5D73A /* ViewController.swift */,
-				457840631F7DE9B900F5D73A /* Main.storyboard */,
-				457840661F7DE9B900F5D73A /* Assets.xcassets */,
-				457840681F7DE9B900F5D73A /* LaunchScreen.storyboard */,
-				4578406B1F7DE9B900F5D73A /* Info.plist */,
+				457840711F7DE9CA00F5D73A /* Resources */,
+				457840721F7DE9D300F5D73A /* View */,
+				457840731F7DE9DC00F5D73A /* Controller */,
 			);
 			path = "Google AdMobs";
+			sourceTree = "<group>";
+		};
+		457840711F7DE9CA00F5D73A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4578406B1F7DE9B900F5D73A /* Info.plist */,
+				457840661F7DE9B900F5D73A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		457840721F7DE9D300F5D73A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				457840681F7DE9B900F5D73A /* LaunchScreen.storyboard */,
+				457840631F7DE9B900F5D73A /* Main.storyboard */,
+				457840761F7DEC0800F5D73A /* NewsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		457840731F7DE9DC00F5D73A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4578405F1F7DE9B900F5D73A /* AppDelegate.swift */,
+				457840741F7DEA8700F5D73A /* NewsTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +163,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				457840621F7DE9B900F5D73A /* ViewController.swift in Sources */,
+				457840751F7DEA8700F5D73A /* NewsTableViewController.swift in Sources */,
+				457840771F7DEC0800F5D73A /* NewsCell.swift in Sources */,
 				457840601F7DE9B900F5D73A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,8 +303,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9H46LQG73T;
-				INFOPLIST_FILE = "Google AdMobs/Info.plist";
+				DEVELOPMENT_TEAM = X5GHG6Y372;
+				INFOPLIST_FILE = "$(SRCROOT)/Google AdMobs/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DevXris.Google-AdMobs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,8 +318,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9H46LQG73T;
-				INFOPLIST_FILE = "Google AdMobs/Info.plist";
+				DEVELOPMENT_TEAM = X5GHG6Y372;
+				INFOPLIST_FILE = "$(SRCROOT)/Google AdMobs/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DevXris.Google-AdMobs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
